@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col">
-                <form id="formContainer" method="POST" onsubmit="return validation()">
+                <form id="formContainer">
                     <div class="card">
                         <div class="card-header">
                             <h2><b>Payment form example</b></h2>
@@ -24,86 +24,71 @@
                             <div class="alert alert-danger " role="alert">
                                 Some fields are missing
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-row" id="formId">
-                                        <div class="form-group col-md-5">
-                                            <label for="inputcard">Card #</label>
-                                            <input type="number" class="form-control" id="inputcard" name="Card"
-                                                placeholder="XXXXXXXXXXXX">
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="CVC #">CVC #</label>
-                                            <input type="number" class="form-control" id="CVC" name="CVC"
-                                                placeholder="0000">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="amount">Amount</label>
-                                            $<input type="number" class="form-control" id="amount" name="Amount"
-                                                placeholder="Amount">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputfirstname">First Name</label>
-                                            <input type="text" class="form-control" id="inputfirstname" name="firstName"
-                                                placeholder="i.e: Jerónimo">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputlastname">Last Name</label>
-                                            <input type="text" class="form-control" id="inputlastname" name="lastName"
-                                                placeholder="i.e: Santa María">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCity">City</label>
-                                            <input type="text" class="form-control" id="inputCity" name="City"
-                                                placeholder="i.e: Santiago">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control" name="inputState">
-                                                <option selected>Pick a state</option>
-                                                <option>RM</option>
-                                                <option>1a Región</option>
-                                                <option>2a Región</option>
-                                                <option>3a Región</option>
-                                                <option>4a Región</option>
-                                                <option>Otra Región</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputZip">Postal Code</label>
-                                            <input type="text" class="form-control" id="inputZip" name="postalCode">
-                                        </div>
-                                    </div>
-                                    <div class="form-row d-flex justify-content-center">
-                                        <div class="form-group col-md-3">
-                                            <label for="We-accept" name="weAcept" class="form-label" value="1">We
-                                                accept:</label>
-                                            <div class="form-group bg-secondary p-2 rounded">
-                                                <input type="radio" name="" id=""> <i
-                                                    class="fab fa-cc-visa px-1 mx-1"></i>
-                                                <input type="radio" name="" id=""> <i
-                                                    class="fab fa-cc-paypal px-1 mx-1"></i>
-                                                <input type="radio" name="" id=""> <i
-                                                    class="fab fa-cc-mastercard px-1 mx-1"></i>
-                                                <input type="radio" name="" id=""> <i
-                                                    class="fab fa-cc-amex px-1 mx-1"></i>
-                                            </div>
-                                            </label>
-                                        </div>
-                                        <div class="form-group col-md-6 offset-md-3">
-                                            <label for="Messege">Messege</label>
-                                            <textarea name="Messege" id="" cols="" rows="4"
-                                                class="form-control"></textarea>
-                                            <small id="passwordHelpBlock" class="form-text text-muted">
-                                                Add any notes here.
-                                            </small>
-                                        </div>
-                                    </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="Card">Card #</label>
+                                    <input type="password" name="Card" class="form-control" id="Card"
+                                        placeholder="XXXXXX">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="CVC">CVC</label>
+                                    <input type="number" name="CVC" class="form-control" id="" placeholder="0000000">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Amount">Amount</label>
+                                    <input type="number" name="Amount" class="form-control" id="" placeholder="Amount">
+                                </div>
+                            </div>
 
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="First-name">First name</label>
+                                    <input type="text" name="firstName" class="form-control" id="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="Last-name">Last name</label>
+                                    <input type="text" name="lastName" class="form-control" id="">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="City">City</label>
+                                    <input type="text" name="City" class="form-control" id="">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" name="inputState" class="form-control">
+                                        <option value="">Choose</option>
+                                        <option>NY</option>
+                                        <option>Oregon</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="Postal-code">Postal code</label>
+                                    <input type="number" name="postalCode" class="form-control" id="">
+                                </div>
+                            </div>
+
+                            <div class="form-row d-flex justify-content-center">
+                                <div class="form-group col-md-3">
+                                    <label for="We-accept" name="weAcept" class="form-label" value="1">We
+                                        accept:</label>
+                                    <div class="form-group bg-secondary p-2 rounded">
+                                        <input type="radio" name="" id=""> <i class="fab fa-cc-visa px-2"></i>
+                                        <input type="radio" name="" id=""> <i class="fab fa-cc-diners-club px-2"></i>
+                                        <input type="radio" name="" id=""> <i class="fab fa-cc-mastercard px-2"></i>
+                                        <input type="radio" name="" id=""> <i class="fab fa-cc-amex px-2"></i>
+                                    </div>
+                                    </label>
+                                </div>
+                                <div class="form-group col-md-6 offset-md-3">
+                                    <label for="Messege">Messege</label>
+                                    <textarea name="Messege" id="" cols="" rows="4" class="form-control"></textarea>
+                                    <small id="passwordHelpBlock" class="form-text text-muted">
+                                        Add any notes here.
+                                    </small>
                                 </div>
                             </div>
                         </div>
@@ -111,10 +96,10 @@
             </div>
             </form>
         </div>
-                <div class="card-footer bg-secondary text-muted d-flex justify-content-end">
-                    <button type="button" class="btn btn-dark m-1">Cancel</button>
-                    <button type="button" class="btn btn-primary m-1" onclick="validation()">Send</button>
-                </div>
+        <div class="card-footer bg-secondary text-muted d-flex justify-content-end">
+            <button onclick="myFunction()" type="button" class="btn btn-dark m-2">Cancel</button>
+            <button type="submit" class="btn btn-primary m-2">Send</button>
+        </div>
     </div>
     </div>
 
@@ -144,7 +129,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <script src="validation.js"></script>
+    <script src="./validator.min.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 
